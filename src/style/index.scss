@@ -1,4 +1,4 @@
-// @import "node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
+@import "node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
 @import "./_Color.scss";
 @import "node_modules/milligram/src/_Base.sass";
 @import "node_modules/milligram/src/_Grid.sass";
@@ -12,12 +12,16 @@ $container-width: 93.0rem;
 
 body{
     font-family: 'Lato', sans-serif;        
-    line-height:2.20;
     letter-spacing: .02em;
-    font-size: 1.45em;   
     color:$color-primary; 
     background: $color-quinary;
     
+}
+
+.container {    
+    max-width:$container-width;
+    line-height:2.20;
+    font-size: .90em;   
 }
 
 .underline {
@@ -188,7 +192,3 @@ h1:before, h2:before, h3:before, h4:before, h5:before {
     padding-right:$headingLabelPadding;
 }
 
-
-.container {    
-    max-width:$container-width;
-}
