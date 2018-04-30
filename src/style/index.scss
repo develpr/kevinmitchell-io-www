@@ -1,0 +1,194 @@
+// @import "node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
+@import "./_Color.scss";
+@import "node_modules/milligram/src/_Base.sass";
+@import "node_modules/milligram/src/_Grid.sass";
+
+
+$headingLabelPadding: .9rem;
+$headingLabelSize: 1.5rem;
+
+$container-width: 93.0rem;
+
+
+body{
+    font-family: 'Lato', sans-serif;        
+    line-height:2.20;
+    letter-spacing: .02em;
+    font-size: 1.45em;   
+    color:$color-primary; 
+    background: $color-quinary;
+    
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: $color-red;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size:1.49em;
+    line-height:3.55;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size:1.32em;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size:1.2em;
+}
+
+h4, h5 {
+    font-weight: lighter;
+    font-size:1.1em;
+}
+
+ul{    
+    list-style: none;
+}
+
+ul ul {
+    margin-left:1.9em;
+}
+
+ul ul ul {
+    margin-left:2.8em;
+}
+
+ul li::before {
+    content: "•"; 
+    color: $color-red;
+    padding-right:1.3em;
+}
+
+hr {
+    height:1px;
+    background:$color-secondary;
+    border:none;
+    margin:1em 1.5em;    
+}
+
+a {
+    color: $color-red;
+    text-decoration: none;
+}
+
+
+ol { counter-reset: item; }
+ol li { display: block; }
+ol li:before {
+    content: counter(item) ".  ";
+    counter-increment: item;
+    color: $color-red;
+
+}
+
+
+@media (min-width: 70.0rem) {
+    body {
+        padding-top:3em;
+    }
+}
+
+@media (min-width: 30.0rem) {
+    .container {
+        padding:0 2.5em;
+    }
+    
+}
+
+img {    
+    max-width: 100%;
+}
+
+pre code:before {
+    content:"` ` `\00000a";
+    font-family:Lato, sans-serif;
+    color:$color-secondary;
+}
+pre code:after {
+    content:"\00000a` ` `";
+    font-family:Lato, sans-serif;
+    color:$color-secondary;
+}
+
+code:before {
+    content:"` ";
+    font-family:Lato, sans-serif;
+    color:$color-secondary;
+}
+code:after {
+    content:" `";
+    font-family:Lato, sans-serif;
+    color:$color-secondary;
+}
+
+pre {
+    
+    background: $color-initial;
+    padding: .51rem;
+    border-radius: .3rem;
+    border: 1px solid $color-secondary;
+    padding-left:1em;
+    margin:.2em;
+}
+
+pre code {
+    background:inherit;
+    padding:0;
+    border-radius:0;
+    border:none;    
+}
+
+code {
+    background: $color-initial;
+    padding: .51rem;
+    border-radius: .3rem;
+    border: 1px solid $color-secondary;
+}
+
+
+h1:before {
+    content: "h1";
+}
+h2:before {
+    content: "h2";
+}
+h3:before {
+    content: "h3";
+}
+h4:before {
+    content: "h4";
+}
+h5:before {
+    content: "h5";
+}
+
+a:before {
+    content: "[ ";
+    color:$color-secondary;
+}
+a:after {
+    content: " ]";
+    color:$color-secondary;
+}
+
+.underline:before,.underline:after {
+    content: "_";
+    color:$color-secondary;
+}
+
+
+h1:before, h2:before, h3:before, h4:before, h5:before {
+    color: $color-secondary; 
+    font-size:$headingLabelSize;   
+    padding-right:$headingLabelPadding;
+}
+
+
+.container {    
+    max-width:$container-width;
+}
