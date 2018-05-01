@@ -1,14 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');       
 @import "node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
 @import "./_Color.scss";
 @import "node_modules/milligram/src/_Base.sass";
 @import "node_modules/milligram/src/_Grid.sass";
 
-
 $headingLabelPadding: .9rem;
 $headingLabelSize: 1.5rem;
-
 $container-width: 93.0rem;
-
 
 body{
     font-family: 'Lato', sans-serif;        

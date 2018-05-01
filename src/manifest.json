@@ -1,0 +1,21 @@
+{
+  "name": "kevinmitchell.io",
+  "short_name": "kevinmitchell.io",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbfbfb",
+  "theme_color": "#fbfbfb",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/assets/icons/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ]
+}
