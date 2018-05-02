@@ -8,7 +8,7 @@ export default class LinkList extends Component {
 
   render({}, {}) {
     return (
-      <nav>
+      <nav style="display:inline;">
         <Link activeClassName="active" href="/blog">
           Blog
         </Link>

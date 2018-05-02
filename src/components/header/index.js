@@ -10,13 +10,12 @@ export default class Header extends Component {
   render({}, {}) {
     return (
       <header>
-        <h1>
+        <h2>
           <Link href="/" activeClass="active">
-            👈 Home
+            🏡
           </Link>
-        </h1>
-        <LinkList />
-        <hr />
+          <LinkList />
+        </h2>
       </header>
     );
   }

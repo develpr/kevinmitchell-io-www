@@ -9,13 +9,15 @@ export default class BlogSnippet extends Component {
 
   render({}, { snippet }) {
     return (
-      <ul>
-        <li>
-          <Link activeClassName="active" href={"/blog/" + snippet.slug}>
-            {snippet.title}
+      <section>
+        <h2>
+          {snippet.title}
+          &nbsp;<Link activeClassName="active" href={"/blog/" + snippet.slug}>
+            Link
           </Link>
-        </li>
-      </ul>
+        </h2>
+        <p>{snippet.preview}</p>
+      </section>
     );
   }
 }
