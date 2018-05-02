@@ -1,192 +1,206 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');       
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import "node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
 @import "./_Color.scss";
 @import "node_modules/milligram/src/_Base.sass";
 @import "node_modules/milligram/src/_Grid.sass";
 
-$headingLabelPadding: .9rem;
+$headingLabelPadding: 0.9rem;
 $headingLabelSize: 1.5rem;
-$container-width: 93.0rem;
+$container-width: 93rem;
 
-body{
-    font-family: 'Lato', sans-serif;        
-    letter-spacing: .02em;
-    color:$color-primary; 
-    background: $color-quinary;
-    
+body {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.02em;
+  color: $color-primary;
+  background: $color-quinary;
 }
 
-.container {    
-    max-width:$container-width;
-    line-height:2.20;
-    font-size: .90em;   
+.container {
+  max-width: $container-width;
+  line-height: 2.2;
+  font-size: 0.9em;
 }
 
 .underline {
-    text-decoration: underline;
-    text-decoration-color: $color-red;
+  text-decoration: underline;
+  text-decoration-color: $color-red;
 }
 
 h1 {
-    font-weight: lighter;
-    font-size:1.49em;
-    line-height:3.55;
+  font-weight: lighter;
+  font-size: 1.49em;
+  line-height: 3.55;
 }
 
 h2 {
-    font-weight: lighter;
-    font-size:1.32em;
+  font-weight: lighter;
+  font-size: 1.32em;
 }
 
 h3 {
-    font-weight: lighter;
-    font-size:1.2em;
+  font-weight: lighter;
+  font-size: 1.2em;
 }
 
-h4, h5 {
-    font-weight: lighter;
-    font-size:1.1em;
+h4,
+h5 {
+  font-weight: lighter;
+  font-size: 1.1em;
 }
 
-ul{    
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 ul ul {
-    margin-left:1.9em;
+  margin-left: 1.9em;
 }
 
 ul ul ul {
-    margin-left:2.8em;
+  margin-left: 2.8em;
 }
 
 ul li::before {
-    content: "•"; 
-    color: $color-red;
-    padding-right:1.3em;
+  content: "•";
+  color: $color-red;
+  padding-right: 1.3em;
 }
 
 hr {
-    height:1px;
-    background:$color-secondary;
-    border:none;
-    margin:1em 1.5em;    
+  height: 1px;
+  background: $color-secondary;
+  border: none;
+  margin: 1em 1.5em;
 }
 
 a {
-    color: $color-red;
-    text-decoration: none;
+  color: $color-red;
+  text-decoration: none;
 }
 
-
-ol { counter-reset: item; }
-ol li { display: block; }
+ol {
+  counter-reset: item;
+}
+ol li {
+  display: block;
+}
 ol li:before {
-    content: counter(item) ".  ";
-    counter-increment: item;
-    color: $color-red;
-
+  content: counter(item) ".  ";
+  counter-increment: item;
+  color: $color-red;
 }
 
-
-@media (min-width: 70.0rem) {
-    body {
-        padding-top:3em;
-    }
+@media (min-width: 70rem) {
+  body {
+    padding-top: 3em;
+  }
 }
 
-@media (min-width: 30.0rem) {
-    .container {
-        padding:0 2.5em;
-    }
-    
+@media (min-width: 30rem) {
+  .container {
+    padding: 0 2.5em;
+  }
 }
 
-img {    
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
 pre code:before {
-    content:"` ` `\00000a";
-    font-family:Lato, sans-serif;
-    color:$color-secondary;
+  content: "` ` `\00000a";
+  font-family: Lato, sans-serif;
+  color: $color-secondary;
 }
 pre code:after {
-    content:"\00000a` ` `";
-    font-family:Lato, sans-serif;
-    color:$color-secondary;
+  content: "\00000a` ` `";
+  font-family: Lato, sans-serif;
+  color: $color-secondary;
 }
 
 code:before {
-    content:"` ";
-    font-family:Lato, sans-serif;
-    color:$color-secondary;
+  content: "` ";
+  font-family: Lato, sans-serif;
+  color: $color-secondary;
 }
 code:after {
-    content:" `";
-    font-family:Lato, sans-serif;
-    color:$color-secondary;
+  content: " `";
+  font-family: Lato, sans-serif;
+  color: $color-secondary;
 }
 
 pre {
-    
-    background: $color-initial;
-    padding: .51rem;
-    border-radius: .3rem;
-    border: 1px solid $color-secondary;
-    padding-left:1em;
-    margin:.2em;
+  background: $color-initial;
+  padding: 0.51rem;
+  border-radius: 0.3rem;
+  border: 1px solid $color-secondary;
+  padding-left: 1em;
+  margin: 0.2em;
 }
 
 pre code {
-    background:inherit;
-    padding:0;
-    border-radius:0;
-    border:none;    
+  background: inherit;
+  padding: 0;
+  border-radius: 0;
+  border: none;
 }
 
 code {
-    background: $color-initial;
-    padding: .51rem;
-    border-radius: .3rem;
-    border: 1px solid $color-secondary;
+  background: $color-initial;
+  padding: 0.51rem;
+  border-radius: 0.3rem;
+  border: 1px solid $color-secondary;
 }
 
-
-h1:before {
+body.edit {
+  h1:before {
     content: "h1";
-}
-h2:before {
+  }
+  h2:before {
     content: "h2";
-}
-h3:before {
+  }
+  h3:before {
     content: "h3";
-}
-h4:before {
+  }
+  h4:before {
     content: "h4";
-}
-h5:before {
+  }
+  h5:before {
     content: "h5";
-}
+  }
 
-a:before {
+  a:before {
     content: "[ ";
-    color:$color-secondary;
-}
-a:after {
+    color: $color-secondary;
+  }
+  a:after {
     content: " ]";
-    color:$color-secondary;
-}
+    color: $color-secondary;
+  }
 
-.underline:before,.underline:after {
+  .underline:before,
+  .underline:after {
     content: "_";
-    color:$color-secondary;
+    color: $color-secondary;
+  }
+
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before,
+  h5:before {
+    color: $color-secondary;
+    font-size: $headingLabelSize;
+    padding-right: $headingLabelPadding;
+  }
 }
 
-
-h1:before, h2:before, h3:before, h4:before, h5:before {
-    color: $color-secondary; 
-    font-size:$headingLabelSize;   
-    padding-right:$headingLabelPadding;
+body {
+  a:before {
+    content: "  ";
+    color: $color-secondary;
+  }
+  a:after {
+    content: "  ";
+    color: $color-secondary;
+  }
 }
-
