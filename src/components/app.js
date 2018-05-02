@@ -2,7 +2,8 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Index from '../routes/index';
-import Profile from '../routes/profile';
+import BlogListRoute from '../routes/blog-list-route';
+import BlogPostRoute from '../routes/blog-post-route';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -25,8 +26,8 @@ export default class App extends Component {
 			<div id="app">
 				<Router onChange={this.handleRoute}>
 					<Index path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
+					<BlogListRoute path="/blog" />
+					<BlogPostRoute path="/blog/:slug" />
 				</Router>
 			</div>
 			</div>
