@@ -15,8 +15,7 @@ export default class Header extends Component {
           <Link href="/" activeClass="active">
             🏡
           </Link>
-          <LinkList />
-          <EditToggle />
+          <LinkList format="short" />
         </h2>
       </header>
     );

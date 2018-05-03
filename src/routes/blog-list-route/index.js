@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
-import BlogList from '../../components/blog-list'
+import BlogList from '../../components/blog-list';
+import Header from '../../components/header';
 
 export default class BlogListRoute extends Component {
 
@@ -9,7 +10,10 @@ export default class BlogListRoute extends Component {
 	
 	render() {
 		return (
-			<BlogList />
+			<section>
+				<Header format="simple" />
+				<BlogList />
+			</section>
 		);
 	}
 }

@@ -1,11 +1,11 @@
 import { h, render, Component } from "preact";
 import BlogSnippet from "../blog-snippet";
-import Header from "../header";
 
 export default class BlogList extends Component {
   constructor(props) {
     super();
-    fetch(`https://api.kevinmitchell.io/content/posts?site=kevinmitchell-io`)
+    fetch(`http://localhost:3000/content/posts?site=kevinmitchell-io`)
+    // fetch(`https://api.kevinmitchell.io/content/posts?site=kevinmitchell-io`)
       .then(response => response.json())
       .then(posts => {
         this.setState({ posts: posts });
@@ -23,8 +23,7 @@ export default class BlogList extends Component {
     }
 
     return (
-      <div>
-        <Header />
+      <div>        
         {postsSnippets}
       </div>
     );

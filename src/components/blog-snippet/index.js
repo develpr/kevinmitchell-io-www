@@ -10,14 +10,17 @@ export default class BlogSnippet extends Component {
   render({}, { snippet }) {
     return (
       <section>
-        <h2>
-          {snippet.title}
-          &nbsp;<Link activeClassName="active" href={"/blog/" + snippet.slug}>
-            Link
+        <br />
+				<hr />
+				<br />
+        <h2>          
+          <Link activeClassName="active" href={"/blog/" + snippet.slug}>
+					{snippet.title}
           </Link>
         </h2>
-        <p>{snippet.preview}</p>
+        <div dangerouslySetInnerHTML={{__html:snippet.previewHtml}}></div>				
       </section>
+			
     );
   }
 }

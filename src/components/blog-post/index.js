@@ -4,7 +4,8 @@ import Header from "../header";
 export default class BlogPost extends Component {
   constructor(props) {
     super();
-    fetch(`https://api.kevinmitchell.io/content/posts/${props.slug}`)
+    // fetch(`https://api.kevinmitchell.io/content/posts/${props.slug}`)
+    fetch(`http://localhost:3000/content/posts/${props.slug}`)
       .then(response => response.json())
       .then(blog => this.setState({ post: blog.html, title: blog.title }));
   }
@@ -15,7 +16,6 @@ export default class BlogPost extends Component {
     }
     return (
       <div>
-        <Header />
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post }} />
       </div>

@@ -4,6 +4,7 @@ import { Router } from "preact-router";
 import Index from "../routes/index";
 import BlogListRoute from "../routes/blog-list-route";
 import BlogPostRoute from "../routes/blog-post-route";
+import EditToggle from '../components/edit-toggle';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -29,6 +30,7 @@ export default class App extends Component {
             <BlogListRoute path="/blog" />
             <BlogPostRoute path="/blog/:slug" />
           </Router>
+          <EditToggle />
         </div>
       </div>
     );

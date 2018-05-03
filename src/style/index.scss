@@ -204,3 +204,13 @@ body {
     color: $color-secondary;
   }
 }
+
+
+/**
+*
+*   Hacky-ish hacks for home page image
+*
+*/
+img[title="Kevin Mitchell"] { 
+  width:250px;
+}
