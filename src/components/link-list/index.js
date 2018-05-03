@@ -19,7 +19,7 @@ export default class LinkList extends Component {
     }
     else {
       return (
-        <nav>
+        
           <ul>
             <li><strong>Internal Links</strong>
               <ul>
@@ -34,16 +34,8 @@ export default class LinkList extends Component {
                 </Link>
                 </li>
               </ul>
-            </li>
-            <li><strong>External / Social Links</strong>
-              <ul>
-                <li>
-                  <a href="http://github.com/develpr">github</a>                
-                </li>                
-              </ul>
-            </li>
+            </li>            
           </ul>
-        </nav>
       )
     }
 

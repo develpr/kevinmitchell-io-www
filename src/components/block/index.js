@@ -25,8 +25,8 @@ export default class Block extends Component {
 			// });
 			
 		} else {
-			// fetch(`https://api.kevinmitchell.io/content/blocks/${props.id}`)
-			fetch(`http://localhost:3000/content/blocks/${props.id}`)
+			fetch(`https://api.kevinmitchell.io/content/blocks/${props.id}`)
+			// fetch(`http://localhost:3000/content/blocks/${props.id}`)
       		.then(response => response.json())
       		.then(content => this.setState({content: content.html }));
 		}

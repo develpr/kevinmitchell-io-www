@@ -6,8 +6,9 @@ export default class Index extends Component {
   render() {
     return (
       <section>
-        <Block id="home-page-content" default="" />
+        <Block id="home-page-content" />
         <LinkList />
+        <Block id="social-link-list" />
       </section>
     );
   }

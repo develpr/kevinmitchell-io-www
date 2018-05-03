@@ -4,8 +4,8 @@ import BlogSnippet from "../blog-snippet";
 export default class BlogList extends Component {
   constructor(props) {
     super();
-    fetch(`http://localhost:3000/content/posts?site=kevinmitchell-io`)
-    // fetch(`https://api.kevinmitchell.io/content/posts?site=kevinmitchell-io`)
+    // fetch(`http://localhost:3000/content/posts?site=kevinmitchell-io`)
+    fetch(`https://api.kevinmitchell.io/content/posts?site=kevinmitchell-io`)
       .then(response => response.json())
       .then(posts => {
         this.setState({ posts: posts });
