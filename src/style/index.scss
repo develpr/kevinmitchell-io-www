@@ -6,13 +6,17 @@
 
 $headingLabelPadding: 0.9rem;
 $headingLabelSize: 1.5rem;
-$container-width: 93rem;
+$container-width: 70rem;
 
 body {
   font-family: "Lato", sans-serif;
   letter-spacing: 0.02em;
   color: $color-primary;
   background: $color-quinary;
+}
+
+p {
+  margin-bottom: 2em;
 }
 
 .container {
@@ -106,28 +110,6 @@ img {
   max-width: 100%;
 }
 
-pre code:before {
-  content: "` ` `\00000a";
-  font-family: Lato, sans-serif;
-  color: $color-secondary;
-}
-pre code:after {
-  content: "\00000a` ` `";
-  font-family: Lato, sans-serif;
-  color: $color-secondary;
-}
-
-code:before {
-  content: "` ";
-  font-family: Lato, sans-serif;
-  color: $color-secondary;
-}
-code:after {
-  content: " `";
-  font-family: Lato, sans-serif;
-  color: $color-secondary;
-}
-
 pre {
   background: $color-initial;
   padding: 0.51rem;
@@ -151,6 +133,10 @@ code {
   border: 1px solid $color-secondary;
 }
 
+del {
+  text-decoration: line-through;
+}
+
 body.edit {
   h1:before {
     content: "h1";
@@ -168,6 +154,26 @@ body.edit {
     content: "h5";
   }
 
+  pre code:before {
+    content: "` ` `\00000a";
+  }
+  pre code:after {
+    content: "\00000a` ` `";
+  }
+
+  code:before {
+    content: "` ";
+  }
+  code:after {
+    content: " `";
+  }
+
+  del:before,
+  del:after {
+    content: "-";
+    color: color-secondary;
+  }
+
   a:before {
     content: "[ ";
     color: $color-secondary;
@@ -177,9 +183,29 @@ body.edit {
     color: $color-secondary;
   }
 
-  .underline:before,
-  .underline:after {
+  strong:before,
+  strong:after {
+    content: "*";
+    color: $color-secondary;
+  }
+
+  em:before,
+  em:after {
+    content: "/";
+    color: $color-secondary;
+  }
+
+  em.underline:before,
+  em.underline:after {
     content: "_";
+    color: $color-secondary;
+  }
+
+  pre code:before,
+  pre code:after,
+  code:before,
+  code:after {
+    font-family: Lato, sans-serif;
     color: $color-secondary;
   }
 
@@ -205,12 +231,11 @@ body {
   }
 }
 
-
 /**
 *
 *   Hacky-ish hacks for home page image
 *
 */
-img[title="Kevin Mitchell"] { 
-  width:250px;
+img[title="Kevin Mitchell"] {
+  width: 250px;
 }
