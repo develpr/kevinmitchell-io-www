@@ -2,8 +2,7 @@ import { h, render, Component } from "preact";
 import BlogSnippet from "../blog-snippet";
 
 export default class BlogList extends Component {
-  constructor(props) {
-    super();
+  componentWillMount() {
     // fetch(`http://localhost:3000/content/posts?site=kevinmitchell-io`)
     fetch(`https://api.kevinmitchell.io/content/posts?site=kevinmitchell-io`)
       .then(response => response.json())
@@ -22,10 +21,6 @@ export default class BlogList extends Component {
       postsSnippets.push(<BlogSnippet snippet={posts[i]} />);
     }
 
-    return (
-      <div>        
-        {postsSnippets}
-      </div>
-    );
+    return <div>{postsSnippets}</div>;
   }
 }
